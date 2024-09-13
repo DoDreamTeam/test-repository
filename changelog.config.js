@@ -5,7 +5,7 @@ module.exports = {
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
-  scopes: [],
+  scopes: ['FE', 'BE', "DO"],
   types: {
     deploy: {
       description: '배포',
