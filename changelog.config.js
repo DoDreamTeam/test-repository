@@ -1,7 +1,7 @@
 module.exports = {
   disableEmoji: false,
   format: '{type}{scope}: {emoji}{subject}',
-  list: ['test', 'feat', 'fix', 'deploy', 'docs', 'refactor', 'style', 'ci', 'perf'],
+  list: ['ci', 'deploy', 'docs', 'feat', 'fix', 'perf', 'refactor', 'setting', 'style', 'test'],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
@@ -31,6 +31,11 @@ module.exports = {
       description: '버그 수정',
       emoji: '🐛',
       value: 'fix'
+    },
+    setting: {
+      description: '환경 설정',
+      emoji: '🔧',
+      value: 'setting'
     },
     perf: {
       description: '성능 변화를 목적으로 코드 추가 및 수정',
