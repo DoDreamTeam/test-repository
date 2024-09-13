@@ -1,67 +1,62 @@
 module.exports = {
   disableEmoji: false,
   format: '{type}{scope}: {emoji}{subject}',
-  list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf'],
+  list: ['test', 'feat', 'fix', 'deploy', 'docs', 'refactor', 'style', 'ci', 'perf'],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
   scopes: [],
   types: {
-    chore: {
-      description: 'Build process or auxiliary tool changes',
+    deploy: {
+      description: '배포',
       emoji: '🤖',
-      value: 'chore'
+      value: 'deploy'
     },
     ci: {
-      description: 'CI related changes',
+      description: 'CI 관련 변경',
       emoji: '🎡',
       value: 'ci'
     },
     docs: {
-      description: 'Documentation only changes',
+      description: '문서 추가 및 수정',
       emoji: '✏️',
       value: 'docs'
     },
     feat: {
-      description: 'A new feature',
+      description: '기능 추가 및 수정',
       emoji: '🎸',
       value: 'feat'
     },
     fix: {
-      description: 'A bug fix',
+      description: '버그 수정',
       emoji: '🐛',
       value: 'fix'
     },
     perf: {
-      description: 'A code change that improves performance',
+      description: '성능 변화를 목적으로 코드 추가 및 수정',
       emoji: '⚡️',
       value: 'perf'
     },
     refactor: {
-      description: 'A code change that neither fixes a bug or adds a feature',
+      description: '코드 리팩토링',
       emoji: '💡',
       value: 'refactor'
     },
-    release: {
-      description: 'Create a release commit',
-      emoji: '🏹',
-      value: 'release'
-    },
     style: {
-      description: 'Markup, white-space, formatting, missing semi-colons...',
+      description: '주석, 프리티어 등 기능의 영향없이 코드의 모양새만 바뀌는 경우',
       emoji: '💄',
       value: 'style'
     },
     test: {
-      description: 'Adding missing tests',
+      description: '테스트 코드 추가 및 수정',
       emoji: '💍',
       value: 'test'
     },
     messages: {
-      type: 'Select the type of change that you\'re committing:',
-      customScope: 'Select the scope this component affects:',
-      subject: 'Write a short, imperative mood description of the change:\n',
-      body: 'Provide a longer description of the change:\n ',
+      type: '커밋 타입: 소문자 영단어로 작성\n',
+      customScope: 'FE (클라이언트 관련 작업), BE (서버 관련 작업), DO (DevOps 관련 작업) 중 관련된 작업으로 작성\n',
+      subject: '명령형으로 작성, 마침표로 끝나지 않음 커밋과 관련된 이슈 번호 작성\n',
+      body: '커밋에 대한 내용 작성\n ',
       breaking: 'List any breaking changes:\n',
       footer: 'Issues this commit closes, e.g #123:',
       confirmCommit: 'The packages that this commit has affected\n',
